@@ -36,7 +36,7 @@ export const auth = betterAuth({
     'http://localhost:8081',
     'https://appleid.apple.com',
     // Web build (Expo web) deployed on Vercel — testers open it in the browser.
-    'https://dist-delta-seven-ondu2kjrl4.vercel.app',
+    'https://flowstate-web-five.vercel.app',
     ...(env.EXTRA_TRUSTED_ORIGINS ? env.EXTRA_TRUSTED_ORIGINS.split(',') : []),
   ],
 });
