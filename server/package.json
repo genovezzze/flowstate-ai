@@ -1,0 +1,27 @@
+{
+  "name": "flowstate-api",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "tsx watch --env-file=.env scripts/dev.ts",
+    "migrate": "tsx --env-file=.env scripts/migrate.ts",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@better-auth/expo": "^1.7.6",
+    "better-auth": "^1.7.6",
+    "hono": "^4.13.9",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^2.1.1",
+    "@types/node": "^26.6.2",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  }
+}
