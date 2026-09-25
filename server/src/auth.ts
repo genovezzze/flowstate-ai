@@ -1,4 +1,5 @@
 import { betterAuth } from 'better-auth';
+import { bearer } from 'better-auth/plugins';
 import { expo } from '@better-auth/expo';
 import { pool } from './db.js';
 
@@ -27,7 +28,10 @@ export const auth = betterAuth({
     },
   },
   user: { deleteUser: { enabled: true } },
-  plugins: [expo()],
+  // bearer: web clients can't read the Set-Cookie header, so they authenticate
+  // with an Authorization: Bearer token instead (also avoids Safari's
+  // third-party cookie blocking for the cross-domain web build).
+  plugins: [expo(), bearer()],
   trustedOrigins: [
     'flowstate://',
     // Expo Go during development

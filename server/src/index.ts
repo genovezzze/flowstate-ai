@@ -13,6 +13,9 @@ app.use(
     origin: (o) => (o && /^(http:\/\/localhost:\d+|https:\/\/.*\.vercel\.app)$/.test(o) ? o : null),
     credentials: true,
     allowHeaders: ['Content-Type', 'Authorization', 'Cookie', 'expo-origin'],
+    // set-auth-token: bearer plugin returns the session token here so the web
+    // client can store it (JS cannot read Set-Cookie in a browser).
+    exposeHeaders: ['set-auth-token'],
     allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   }),
 );
