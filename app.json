@@ -45,6 +45,19 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "9aef65fa-b28a-450c-8294-da876d1fa82c"
+      }
+    },
+    "owner": "genovezzzze",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/9aef65fa-b28a-450c-8294-da876d1fa82c"
     }
   }
 }
